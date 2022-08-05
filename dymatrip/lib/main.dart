@@ -1,26 +1,17 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors,, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 void main() {
   runApp(DymaTrip());
 }
 
 class DymaTrip extends StatelessWidget {
+  const DymaTrip({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.home),
-          title: Text('Dymatrip'),
-          actions: [Icon(Icons.more_vert)],
-        ),
-        body: Container(
-          child: Text("Dyma"),
-        ),
-      ),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Home());
   }
 }
