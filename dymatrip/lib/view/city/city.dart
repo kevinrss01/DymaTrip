@@ -34,6 +34,12 @@ class _CityState extends State<City> {
     );
   }
 
+  List<Activity> get TripActivities {
+    return widget.activities.where((activity) {
+      return mytrip.activities.contains(activity.id);
+    }).toList();
+  }
+
   void setDate() {
     showDatePicker(
       context: context,
